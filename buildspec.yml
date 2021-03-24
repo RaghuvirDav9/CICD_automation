@@ -3,12 +3,13 @@ run-as: codebuild-user
 phases:
   install:
     commands:
+      - yum install docker -y
+  pre_build:
+    commands:
       - docker build -t dockerdemo .
       - docker tag dockerdemo:latest 183650099165.dkr.ecr.ap-south-1.amazonaws.com/dockerdemo:latest
       - docker push 183650099165.dkr.ecr.ap-south-1.amazonaws.com/dockerdemo:latest
       - echo 'in install phase'
-  pre_build:
-    commands:
       - echo 'in pre build phase'
     finally:
       - echo 'in finally of prebuild phase'
