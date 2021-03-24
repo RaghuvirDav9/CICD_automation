@@ -1,0 +1,25 @@
+version: 0.2
+run-as: codebuild-user
+phases:
+  install:
+    commands:
+      - docker build -t dockerdemo .
+      - docker tag dockerdemo:latest 183650099165.dkr.ecr.ap-south-1.amazonaws.com/dockerdemo:latest
+      - docker push 183650099165.dkr.ecr.ap-south-1.amazonaws.com/dockerdemo:latest
+      - echo 'in install phase'
+  pre_build:
+    commands:
+      - echo 'in pre build phase'
+    finally:
+      - echo 'in finally of prebuild phase'
+  build:
+    commands:
+      - echo 'in build phase'
+      - ls -la
+  post_build:
+    run-as: root
+    commands:
+      - whoami
+      - echo 'in post build phase'
+    finally:
+      - ls -la
