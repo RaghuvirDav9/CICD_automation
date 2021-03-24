@@ -1,9 +1,10 @@
 version: 0.2
-run-as: codebuild-user
+#run-as: codebuild-user
+run-as: root
 phases:
   install:
     commands:
-      - sudo yum install docker -y
+      - yum install docker -y
   pre_build:
     commands:
       - docker build -t dockerdemo .
