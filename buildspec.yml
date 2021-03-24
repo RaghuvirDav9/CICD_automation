@@ -4,7 +4,8 @@ run-as: root
 phases:
   install:
     commands:
-      - yum install docker -y
+#      - yum install docker -y
+      - echo 'in install'
   pre_build:
     commands:
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 183650099165.dkr.ecr.ap-south-1.amazonaws.com
