@@ -3,7 +3,7 @@ run-as: codebuild-user
 phases:
   install:
     commands:
-      - yum install docker -y
+      - sudo yum install docker -y
   pre_build:
     commands:
       - docker build -t dockerdemo .
