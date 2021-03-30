@@ -34,7 +34,7 @@ phases:
     finally:
       - ls -la
 
-  artifacts:
-    files:
-      - '**/*'
+artifacts:
+  files:
+    - '**/*'
 #    base-directory: 'docker'
