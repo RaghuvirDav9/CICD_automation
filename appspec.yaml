@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:ap-south-1:183650099165:task-definition/TaskDefinitionDEMO:34"
+        TaskDefinition: "arn:aws:ecs:ap-south-1:183650099165:task-definition/TaskDefinitionDEMO:36"
         LoadBalancerInfo: 
           ContainerName: "httpdDEMO"
           ContainerPort: 80
