@@ -56,7 +56,7 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:ap-south-1:183650099165:task-definition/TaskDefinitionDEMO:30",
+  "taskDefinitionArn": "arn:aws:ecs:ap-south-1:183650099165:task-definition/TaskDefinitionDEMO:34",
   "family": "TaskDefinitionDEMO",
   "requiresAttributes": [
     {
