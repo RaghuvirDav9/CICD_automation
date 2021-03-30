@@ -1,0 +1,10 @@
+{
+  "ImageSizeInBytes":"54423813",
+  "ImageDigest":"sha256:0af382a3f8a5b16d769ae9d85c94c46f16e337d2b7c77557f8a6297514fc864d",
+  "Version":"1.0",
+  "ImagePushedAt":"Tue Mar 30 12:59:05 UTC 2021",
+  "RegistryId":"183650099165",
+  "RepositoryName":"dockerdemo",
+  "ImageURI":"183650099165.dkr.ecr.ap-south-1.amazonaws.com/dockerdemo@sha256:0af382a3f8a5b16d769ae9d85c94c46f16e337d2b7c77557f8a6297514fc864d",
+  "ImageTags":["latest"]
+}
