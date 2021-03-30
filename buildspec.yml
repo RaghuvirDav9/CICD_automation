@@ -33,3 +33,8 @@ phases:
       - echo 'in post build phase'
     finally:
       - ls -la
+
+  artifacts:
+    files:
+      - '**/*'
+#    base-directory: 'docker'
