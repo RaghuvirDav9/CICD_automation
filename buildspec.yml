@@ -24,15 +24,9 @@ phases:
       - echo 'in pre build phase'
     finally:
       - echo 'in finally of prebuild phase'
-#      - chmod +x demo.sh
-#      - ./demo.sh
-#      - a="$(<appspec.yaml)"
       - OUTPUT=$(aws ecs describe-task-definition --task-definition TaskDefinitionDEMO | jq '.[] | .taskDefinitionArn')
       - echo "$OUTPUT"
       - sed -i 's|task-def|'${OUTPUT}'|g' appspec.yaml
-#      - echo "${a/task-def/$OUTPUT}"
-#      - echo "${a/task-def/$OUTPUT}" > appspec.yaml
-#      - rpl '$task_def' ${OUTPUT} appspec.yaml
   build:
     commands:
       - cat appspec.yaml
