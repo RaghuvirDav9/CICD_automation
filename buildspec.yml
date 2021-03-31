@@ -11,7 +11,7 @@ phases:
 #      - apt install rpl
 #      - dockerd
 #      - service docker.io start
-#      - apt-get update
+      - apt-get install rpl
 #      - apt-get install docker-ce docker-ce-cli containerd.io
   pre_build:
     commands:
