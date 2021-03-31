@@ -11,8 +11,8 @@ phases:
 #      - apt install rpl
 #      - dockerd
 #      - service docker.io start
-      - apt-get update
-      - apt-get install rpl
+#      - apt-get update
+#      - apt-get install rpl
 #      - apt-get install docker-ce docker-ce-cli containerd.io
   pre_build:
     commands:
@@ -24,8 +24,8 @@ phases:
       - echo 'in pre build phase'
     finally:
       - echo 'in finally of prebuild phase'
-      - OUTPUT=$(aws ecs describe-task-definition --task-definition TaskDefinitionDEMO | jq '.[] | .taskDefinitionArn')
-      - rpl '$task_def' ${OUTPUT} appspec.yaml
+#      - OUTPUT=$(aws ecs describe-task-definition --task-definition TaskDefinitionDEMO | jq '.[] | .taskDefinitionArn')
+#      - rpl '$task_def' ${OUTPUT} appspec.yaml
   build:
     commands:
       - cat appspec.yaml
