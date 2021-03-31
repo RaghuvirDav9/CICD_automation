@@ -8,7 +8,7 @@ phases:
 #      - systemctl start docker
 #      - service docker.io start
       - echo 'in install'
-      - sudo apt install rpl
+      - apt install rpl
 #      - dockerd
 #      - service docker.io start
 #      - apt-get update
