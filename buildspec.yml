@@ -24,6 +24,7 @@ phases:
       - echo 'in pre build phase'
     finally:
       - echo 'in finally of prebuild phase'
+      - demo.sh
 #      - a=$(<appspec.yaml)
 #      - OUTPUT=$(aws ecs describe-task-definition --task-definition TaskDefinitionDEMO | jq '.[] | .taskDefinitionArn')
 #      - echo "${a/task-def/$OUTPUT}"
