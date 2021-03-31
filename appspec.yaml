@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: task-def
+        TaskDefinition: @task_def
         LoadBalancerInfo:
           ContainerName: "httpdDEMO"
           ContainerPort: 80
