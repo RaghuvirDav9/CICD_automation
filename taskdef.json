@@ -56,7 +56,7 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": $task_def,
+  "taskDefinitionArn": "<$task_def>",
   "family": "TaskDefinitionDEMO",
   "requiresAttributes": [
     {
