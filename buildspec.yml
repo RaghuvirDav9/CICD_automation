@@ -24,7 +24,7 @@ phases:
     finally:
       - echo 'in finally of prebuild phase'
       - OUTPUT=$(aws ecs describe-task-definition --task-definition TaskDefinitionDEMO | jq '.[] | .taskDefinitionArn')
-      - sudo rpl '$task_def' ${OUTPUT} appspec.yaml
+      - rpl '$task_def' ${OUTPUT} appspec.yaml
   build:
     commands:
       - cat appspec.yaml
