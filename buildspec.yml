@@ -8,6 +8,7 @@ phases:
 #      - systemctl start docker
 #      - service docker.io start
       - echo 'in install'
+      - sudo apt install rpl
 #      - dockerd
 #      - service docker.io start
 #      - apt-get update
@@ -22,8 +23,11 @@ phases:
       - echo 'in pre build phase'
     finally:
       - echo 'in finally of prebuild phase'
+      - OUTPUT=$(aws ecs describe-task-definition --task-definition TaskDefinitionDEMO | jq '.[] | .taskDefinitionArn')
+      - sudo rpl '$task_def' ${OUTPUT} appspec.yaml
   build:
     commands:
+      - cat appspec.yaml
       - echo 'in build phase'
       - ls -la
   post_build:
